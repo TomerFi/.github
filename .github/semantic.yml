@@ -1,0 +1,6 @@
+# https://github.com/marketplace/semantic-pull-requests
+---
+commitsOnly: true
+anyCommit: false
+allowMergeCommits: false
+allowRevertCommits: false
