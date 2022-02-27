@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2.4.0
 
       - name: Label syncer
-        uses: micnncim/action-label-syncer@v1
+        uses: micnncim/action-label-syncer@v1.3.0
         with:
           manifest: label_syncer.yml
           repository: |
