@@ -1,5 +1,9 @@
 # Pull Request
 
+## Checklist
+
+[] - I have followed this repository's contributing guidelines
+
 ## Description
 
 A clear and concise description of what was changed and why.
