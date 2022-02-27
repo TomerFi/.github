@@ -1,0 +1,32 @@
+---
+name: Sync labels
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - label_syncer.yml
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    name: Sync labels
+    steps:
+      - name: Source checkout
+        uses: actions/checkout@v2.4.0
+
+      - name: Label syncer
+        uses: micnncim/action-label-syncer@v1
+        with:
+          manifest: label_syncer.yml
+          repository: |
+              tomerfi/aioswitcher
+              tomerfi/switcher_webapi
+              tomerfi/tomfi-archetypes
+              tomerfi/alexa-skills-tester
+              tomerfi/hebcal-api
+              tomerfi/alexa-skill-shabbat-times
+              tomerfi/version-bumper
+              tomerfi/version-bumper-action
+          token: ${{ secrets.LABEL_SYNCER_PAT }}
