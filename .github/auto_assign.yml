@@ -1,9 +1,7 @@
 # https://github.com/kentaro-m/auto-assign
 ---
-addReviewers: true
+addReviewers: false
 addAssignees: author
-reviewers:
-  - tomerfi
-skipKeywords:
-  - "type: wip"
-numberOfReviewers: 1
+skipUsers:
+  - dependabot[bot]
+  - allcontributors[bot]
