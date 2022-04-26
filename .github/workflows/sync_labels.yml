@@ -29,4 +29,5 @@ jobs:
               tomerfi/alexa-skill-shabbat-times
               tomerfi/version-bumper
               tomerfi/version-bumper-action
+              tomerfi/auto-me-bot
           token: ${{ secrets.LABEL_SYNCER_PAT }}
