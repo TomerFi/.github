@@ -11,8 +11,9 @@
 ## Checklist
 
 - [ ] I have followed this repository's contributing guidelines.
-- [ ] I used the conventional commits specification for my commit messages.
-- [ ] My commits are signed off.
+- [ ] I have used the conventional commits specification for my commit messages.
+- [ ] I have signed my commits.
+- [ ] I will adhere to the project's code of conduct.
 
 ## Additional information
 
