@@ -31,4 +31,5 @@ jobs:
               tomerfi/version-bumper
               tomerfi/version-bumper-action
               tomerfi/auto-me-bot
+              tomerfi/who-my-peers
           token: ${{ secrets.LABEL_SYNCER_PAT }}
