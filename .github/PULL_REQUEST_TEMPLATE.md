@@ -1,12 +1,12 @@
 # Pull Request
 
-> First PR? don't hesitate, push it.
+> First PR? don't hesitate, open it.
 
 ## Description
 
 > Describe what you did and why.
 
-**Related issue (if any):** fixes #*issue_number_goes_here*
+**Related issue (if any):** fixes #issue_number_goes_here
 
 ## Checklist
 
@@ -18,4 +18,4 @@
 ## Additional information
 
 > Anything else?
-> 
+>
