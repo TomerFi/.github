@@ -114,3 +114,13 @@
 - name: "good first issue"
   color: "7057ff"
   description: "Good for newcomers"
+# hacktoberfest labels
+- name: "hacktoberfest"
+  color: "cfd1d9"
+  description: "hacktoberfest"
+- name: "hacktoberfest-accepted"
+  color: "cfd1d9"
+  description: "hacktoberfest-accepted"
+- name: "invalid"
+  color: "cfd1d9"
+  description: "hacktoberfest-invalid"
