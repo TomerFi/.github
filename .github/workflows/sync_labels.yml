@@ -32,4 +32,5 @@ jobs:
               tomerfi/version-bumper-action
               tomerfi/auto-me-bot
               tomerfi/github-management-scripts
+              tomerfi/shabbat-api
           token: ${{ secrets.LABEL_SYNCER_PAT }}
