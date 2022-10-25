@@ -26,7 +26,6 @@ jobs:
               tomerfi/switcher_webapi
               tomerfi/tomfi-archetypes
               tomerfi/alexa-skills-tester
-              tomerfi/hebcal-api
               tomerfi/alexa-skill-shabbat-times
               tomerfi/version-bumper
               tomerfi/version-bumper-action
