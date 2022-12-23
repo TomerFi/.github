@@ -32,4 +32,5 @@ jobs:
               tomerfi/auto-me-bot
               tomerfi/github-management-scripts
               tomerfi/shabbat-api
+              tomerfi/github-viewer-stats
           token: ${{ secrets.LABEL_SYNCER_PAT }}
