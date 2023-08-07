@@ -31,6 +31,7 @@ jobs:
               tomerfi/version-bumper-action
               tomerfi/auto-me-bot
               tomerfi/github-management-scripts
+              tomerfi/jbang-catalog
               tomerfi/shabbat-api
               tomerfi/github-viewer-stats
           token: ${{ secrets.LABEL_SYNCER_PAT }}
