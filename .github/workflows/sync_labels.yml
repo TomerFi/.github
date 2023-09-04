@@ -15,7 +15,7 @@ jobs:
     name: Sync labels
     steps:
       - name: Source checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Label syncer
         uses: micnncim/action-label-syncer@v1.3.0
