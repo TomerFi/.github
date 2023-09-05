@@ -22,6 +22,7 @@ jobs:
         with:
           manifest: label_syncer.yml
           repository: |
+              tomerfi/.github
               tomerfi/aioswitcher
               tomerfi/switcher_webapi
               tomerfi/tomfi-archetypes
