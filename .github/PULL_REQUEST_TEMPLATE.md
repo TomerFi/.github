@@ -1,7 +1,6 @@
-<!-- markdownlint-disable MD041-->
 ## Description
 
-> Describe what you did and why.
+<!-- Describe what you did and why. -->
 
 **Related issue (if any):** fixes #issue_number_goes_here
 
@@ -12,4 +11,4 @@
 
 ## Additional information
 
-> Anything else?
+<!-- Anything else? -->
