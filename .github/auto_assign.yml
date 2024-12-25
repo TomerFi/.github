@@ -1,7 +1,0 @@
-# https://github.com/kentaro-m/auto-assign
----
-addReviewers: false
-addAssignees: author
-skipUsers:
-  - dependabot[bot]
-  - allcontributors[bot]
