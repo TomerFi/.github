@@ -1,5 +1,4 @@
 ## Description
-
 <!-- Describe what you did and why. -->
 
 ## Checklist
@@ -8,5 +7,4 @@
 - [ ] I will adhere to the project's code of conduct.
 
 ## Additional information
-
 <!-- Anything else? -->
