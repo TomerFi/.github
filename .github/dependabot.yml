@@ -1,4 +1,3 @@
-# https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
 ---
 version: 2
 updates:
@@ -6,10 +5,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    assignees:
-      - "TomerFi"
     labels:
       - "type: dependencies"
     commit-message:
       prefix: "ci"
-      include: "scope"
+    rebase-strategy: disabled
+    assignees:
+      - "TomerFi"
