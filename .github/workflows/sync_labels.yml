@@ -25,10 +25,7 @@ jobs:
               tomerfi/.github
               tomerfi/aioswitcher
               tomerfi/switcher_webapi
-              tomerfi/tomfi-archetypes
               tomerfi/version-bumper
               tomerfi/version-bumper-action
               tomerfi/auto-me-bot
-              tomerfi/jbang-catalog
-              tomerfi/shabbat-api
           token: ${{ secrets.LABEL_SYNCER_PAT }}
