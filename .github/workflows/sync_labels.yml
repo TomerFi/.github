@@ -9,23 +9,51 @@ on:
     paths:
       - label_syncer.yml
 
+env:
+  REPOS: |
+    TomerFi/.github
+    TomerFi/aioswitcher
+    TomerFi/switcher_webapi
+    TomerFi/version-bumper
+    TomerFi/version-bumper-action
+    TomerFi/auto-me-bot
+    TomerFi/github-viewer-stats
+    TomerFi/my-little-helper
+
 jobs:
   sync-labels:
     runs-on: ubuntu-latest
     name: Sync labels
     steps:
       - name: Source checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
-      - name: Label syncer
-        uses: micnncim/action-label-syncer@v1.3.0
-        with:
-          manifest: label_syncer.yml
-          repository: |
-              tomerfi/.github
-              tomerfi/aioswitcher
-              tomerfi/switcher_webapi
-              tomerfi/version-bumper
-              tomerfi/version-bumper-action
-              tomerfi/auto-me-bot
-          token: ${{ secrets.LABEL_SYNCER_PAT }}
+      - name: Sync labels to all repos
+        env:
+          GH_TOKEN: ${{ secrets.LABEL_SYNCER_PAT }}
+        run: |
+          # Install yq
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+
+          # Loop through each repo
+          echo "$REPOS" | while read -r repo; do
+            [ -z "$repo" ] && continue
+            echo "::group::Syncing labels to $repo"
+
+            # Loop through each label in the manifest
+            yq -o=json '.' label_syncer.yml | jq -c '.[]' | while read -r label; do
+              name=$(echo "$label" | jq -r '.name')
+              color=$(echo "$label" | jq -r '.color')
+              description=$(echo "$label" | jq -r '.description // ""')
+
+              echo "  Creating/updating label: $name"
+              gh label create "$name" \
+                --repo "$repo" \
+                --color "$color" \
+                --description "$description" \
+                --force 2>/dev/null || echo "    Failed to sync label: $name"
+            done
+
+            echo "::endgroup::"
+          done
