@@ -26,7 +26,7 @@ jobs:
     name: Sync labels
     steps:
       - name: Source checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Sync labels to all repos
         env:
