@@ -104,5 +104,3 @@
 - name: "invalid"
   color: "cfd1d9"
   description: "hacktoberfest-invalid"
-
-# Triggered sync
