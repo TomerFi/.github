@@ -36,6 +36,8 @@ jobs:
           sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
           sudo chmod +x /usr/local/bin/yq
 
+          failed=0
+
           # Loop through each repo
           echo "$REPOS" | while read -r repo; do
             [ -z "$repo" ] && continue
@@ -49,9 +51,16 @@ jobs:
 
               echo "  Creating/updating label: $name"
               if ! gh label create "$name" --repo "$repo" --color "$color" --description "$description" --force; then
-                echo "    Failed to sync label: $name"
+                echo "::error::Failed to sync label '$name' to $repo"
+                echo "1" > /tmp/sync_failed
               fi
             done
 
             echo "::endgroup::"
           done
+
+          # Check if any sync failed
+          if [ -f /tmp/sync_failed ]; then
+            echo "::error::One or more labels failed to sync"
+            exit 1
+          fi
