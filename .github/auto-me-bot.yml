@@ -20,5 +20,5 @@ pr:
 #     ignore:
 #       users: ['allcontributors[bot]', 'dependabot[bot]']
   tasksList:
-  autoApprove:
-    users: ['dependabot']
+  # autoApprove:
+  #   users: ['dependabot']
