@@ -5,10 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "type: dependencies"
     commit-message:
       prefix: "ci"
-    rebase-strategy: disabled
-    assignees:
-      - "TomerFi"
+    groups:
+      gh-actions:
+        patterns:
+          - "*"

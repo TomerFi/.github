@@ -1,15 +1,15 @@
 # https://github.com/apps/auto-me-bot
 ---
 pr:
-  lifecycleLabels:
-    ignoreDrafts: true
-    labels:
-      reviewRequired: "status: needs review"
-      changesRequested: "status: changes requested"
-      moreReviewsRequired: "status: needs more reviews"
-      reviewStarted: "status: review started"
-      approved: "status: approved"
-      merged: "status: merged"
+  # lifecycleLabels:
+  #   ignoreDrafts: true
+  #   labels:
+  #     reviewRequired: "status: needs review"
+  #     changesRequested: "status: changes requested"
+  #     moreReviewsRequired: "status: needs more reviews"
+  #     reviewStarted: "status: review started"
+  #     approved: "status: approved"
+  #     merged: "status: merged"
 #   conventionalCommits:
 #     rules:
 #       'body-max-line-length': [2, 'always', 150]
@@ -21,4 +21,4 @@ pr:
 #       users: ['allcontributors[bot]', 'dependabot[bot]']
   tasksList:
   autoApprove:
-    users: ['dependabot', 'allcontributors']
+    users: ['dependabot']
